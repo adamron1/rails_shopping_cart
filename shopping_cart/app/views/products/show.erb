@@ -6,7 +6,8 @@
   <p><%= @product.created_at.strftime("Last modified on %m/%d/%Y at %I:%M:%p") %></p>
 
   <%= form_tag action: "create", controller: "carts" do %>
-    <%= hidden_field_tag :id, @product.id %>
+    <%= hidden_field_tag :product_id, @product.id %>
     <%= submit_tag 'Add to cart' %>
   <% end %>
+
 </div>

@@ -15,11 +15,18 @@
       <td><%= item.product.title %></td>
       <td>$<%= item.product.price %></td>
       <td><%= link_to 'Show', item.product %></td>
-      <td><%= link_to 'Destroy', item.delete, data: {confirm: 'Are you sure?'} %> </td>
+      <td><%= link_to 'Destroy', item, method: :delete, data: {confirm:'Are you sure?'} %> </td>
 
     </tr>
 
   <%end%>
+
+  <tr>
+    <td></td>
+    <td></td>
+    <td><strong>TOTAL: $</strong></td>
+    <td><strong><%= current_user.total_to_pay %></strong></td>
+  </tr>
 
 
 

@@ -38,3 +38,4 @@ gem 'spring',        group: :development
 # Use pry-byebug
 gem 'pry-byebug'
 
+gem 'devise'
