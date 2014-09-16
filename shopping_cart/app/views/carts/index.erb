@@ -3,7 +3,6 @@
 
 <table>
   <tr>
-    <th>#</th>
     <th>Name</th>
     <th>Price ($)</th>
     <th></th>
@@ -11,14 +10,13 @@
     <th></th>
   </tr>
 
-  <% @cart_contents.each do |product| %>
+  <% @cart_contents.each do |item| %>
     <tr>
-      <td><%= product.id %></td>
-      <td><%= product.title %></td>
-      <td>$<%= product.price %></td>
-      <td><%= link_to 'Show', product %></td>
-      <td><%= link_to 'Destroy', post, :confirm => 'Are you sure?',
-                                     :method => :delete %></td>
+      <td><%= item.product.title %></td>
+      <td>$<%= item.product.price %></td>
+      <td><%= link_to 'Show', item.product %></td>
+      <td><%= link_to 'Destroy', item.delete, data: {confirm: 'Are you sure?'} %> </td>
+
     </tr>
 
   <%end%>

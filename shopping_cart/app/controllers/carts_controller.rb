@@ -4,8 +4,12 @@ class CartsController < ApplicationController
   end
 
   def create
+    Cart.create(product_id: params[:id])
+    params.inspect
+  end
 
-    redirect_to ('/carts')
+  def delete
+
   end
 
 end
